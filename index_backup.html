@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name=<a href="#home"
+        class="text-gray-700 hover:text-secondary transition-colors dark:text-gray-300 dark:hover:text-white">Ana
+    Sayfa</a>
+    <a href="#about"
+        class="text-gray-700 hover:text-secondary transition-colors dark:text-gray-300 dark:hover:text-white">Hakkımda</a>
+    <a href="#experience"
+        class="text-gray-700 hover:text-secondary transition-colors dark:text-gray-300 dark:hover:text-white">Deneyim</a>
+    <a href="#skills"
+        class="text-gray-700 hover:text-secondary transition-colors dark:text-gray-300 dark:hover:text-white">Yetenekler</a>
+    <a href="#projects"
+        class="text-gray-700 hover:text-secondary transition-colors dark:text-gray-300 dark:hover:text-white">Projeler</a>
+    <a href="#certificates"
+        class="text-gray-700 hover:text-secondary transition-colors dark:text-gray-300 dark:hover:text-white">Sertifikalarım</a>
+    <a href="#contact"
+        class="text-gray-700 hover:text-secondary transition-colors dark:text-gray-300 dark:hover:text-white">İletişim</a>ort"
+    content="width=device-width, initial-scale=1.0">
+    <title>Burakcan Aksoy | Bilgisayar Mühendisi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#f97316',
+                        neutral: '#f8fafc',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                        'gradient': 'gradient 8s ease infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.9);
+            transition: background-color 0.3s ease;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-white text-gray-900">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-primary">BA</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-secondary transition-colors">Ana Sayfa</a>
+                    <a href="#about" class="text-gray-700 hover:text-secondary transition-colors">Hakkımda</a>
+                    <a href="#experience" class="text-gray-700 hover:text-secondary transition-colors">Deneyim</a>
+                    <a href="#skills" class="text-gray-700 hover:text-secondary transition-colors">Yetenekler</a>
+                    <a href="#projects" class="text-gray-700 hover:text-secondary transition-colors">Projeler</a>
+                    <a href="#certificates"
+                        class="text-gray-700 hover:text-secondary transition-colors">Sertifikalarım</a>
+                    <a href="#contact" class="text-gray-700 hover:text-secondary transition-colors">İletişim</a>
+                </div>
+                <button class="md:hidden" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-gray-700"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-secondary">Ana Sayfa</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-secondary">Hakkımda</a>
+                <a href="#experience" class="block px-3 py-2 text-gray-700 hover:text-secondary">Deneyim</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-700 hover:text-secondary">Yetenekler</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-700 hover:text-secondary">Projeler</a>
+                <a href="#certificates" class="text-gray-700 hover:text-secondary transition-colors">Sertifikalarım</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-secondary">İletişim</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="relative z-10 text-center text-white px-4 animate-fade-in">
+            <div class="mb-8 animate-float">
+                <img src="vesikalık_foto.jpg" alt="Burakcan Aksoy"
+                    class="w-32 h-32 mx-auto rounded-full border-4 border-white shadow-2xl object-cover">
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 animate-slide-up">
+                Burakcan Aksoy
+            </h1>
+            <p class="text-xl md:text-2xl mb-6 animate-slide-up" style="animation-delay: 0.2s">
+                Bilgisayar Mühendisi
+            </p>
+            <p class="text-lg mb-8 max-w-2xl mx-auto animate-slide-up" style="animation-delay: 0.4s">
+                Backend geliştirme odaklı, AI teknolojileriyle çözüm üreten yazılım geliştiricisi
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style="animation-delay: 0.6s">
+                <a href="#projects"
+                    class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                    Projelerimi İncele
+                </a>
+                <a href="burakcanaksoy_cv.pdf" download
+                    class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition-colors">
+                    <i class="fas fa-download mr-2"></i>CV İndir
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-white text-2xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-primary mb-4">Hakkımda</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded"></div>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Merhaba! Ben <strong>Burakcan Aksoy</strong>. Manisa Celal Bayar Üniversitesi Bilgisayar
+                        Mühendisliği
+                        4. sınıf öğrencisiyim. Kariyer yolculuğumda, mühendisliğin temel yaklaşımlarından biri olan
+                        <strong>T modeli</strong> doğrultusunda kendimi geliştiriyorum.
+                    </p>
+
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        T modelinin dikey yönünde, <strong>backend geliştirme</strong> alanında derin bir uzmanlık
+                        hedefliyorum.
+                        Şu ana kadar <strong>Python Django</strong>, <strong>Java Spring Boot</strong> ve
+                        <strong>C# .NET</strong> teknolojileriyle çok katmanlı (multi-layered) mimariler üzerinde
+                        projeler geliştirdim.
+                        Yatay yönünde ise <strong>yapay zeka</strong>, <strong>makine öğrenimi</strong>,
+                        <strong>veri analizi</strong> ve <strong>derin öğrenme</strong> gibi alanlarda bilgi edinerek,
+                        teknolojiye geniş bir bakış açısıyla yaklaşmayı amaçlıyorum.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="text-center p-4 bg-gray-50 rounded-lg">
+                            <div class="text-2xl font-bold text-secondary">2+</div>
+                            <div class="text-gray-600">Yıl Deneyim</div>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-lg">
+                            <div class="text-2xl font-bold text-secondary">15+</div>
+                            <div class="text-gray-600">Proje</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-gradient-to-r from-secondary to-purple-600 rounded-2xl p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-4">Eğitim & Sertifikalar</h3>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-white pl-4">
+                                <h4 class="font-semibold">Manisa Celal Bayar Üniversitesi</h4>
+                                <p class="text-blue-100">Bilgisayar Mühendisliği</p>
+                                <p class="text-sm text-blue-200">2021 - 2026</p>
+                            </div>
+                            <div class="border-l-4 border-white pl-4">
+                                <h4 class="font-semibold">BTK Akademi Kocaeli</h4>
+                                <p class="text-blue-100">AI ve Veri Analizinden LLM'lere Atölyesi</p>
+                                <p class="text-sm text-blue-200">17/07/2025 - 29/07/2025</p>
+                            </div>
+                            <div class="border-l-4 border-white pl-4">
+                                <h4 class="font-semibold">Darıca Anadolu Lisesi</h4>
+                                <p class="text-blue-100">Lise Diploması</p>
+                                <p class="text-sm text-blue-200">2016 - 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-primary mb-4">İş Deneyimi</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded"></div>
+            </div>
+            <div class="space-y-8">
+                <!-- Acunmedya Akademi -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary">Acunmedya Akademi</h3>
+                            <p class="text-lg text-secondary font-semibold">Stajyer Mühendis</p>
+                        </div>
+                        <div class="text-gray-600 font-medium">
+                            15/02/2025 - 14/06/2025
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-primary mb-3">Kullanılan Teknolojiler:</h4>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">C#</span>
+                                <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">.NET</span>
+                                <span class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">Entity
+                                    Framework</span>
+                                <span class="bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm">Windows
+                                    Forms</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-gray-700">
+                                Gerçek dünya yazılım mimarisi pratiklerini takip ederek çok katmanlı C# projesi
+                                geliştirdim.
+                                Entity Framework ve katmanlı mimari (Entity, Data Access, Business, Presentation)
+                                kullanarak
+                                CRUD tabanlı Windows Forms uygulaması oluşturdum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Meşe Bilişim -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary">Meşe Bilişim</h3>
+                            <p class="text-lg text-secondary font-semibold">Stajyer Mühendis</p>
+                        </div>
+                        <div class="text-gray-600 font-medium">
+                            26/09/2024 - 14/12/2024
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-primary mb-3">Kullanılan Teknolojiler:</h4>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm">Python</span>
+                                <span class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">Django</span>
+                                <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">REST API</span>
+                                <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">JWT</span>
+                                <span
+                                    class="bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm">ThingsBoard</span>
+                                <span class="bg-red-200 text-red-800 px-3 py-1 rounded-full text-sm">WebSocket</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-gray-700">
+                                Hayvancılık sektöründe longitudinal veri analizi için Python scriptleri geliştirdim.
+                                Django ile web uygulamaları oluşturdum ve ThingsBoard IoT platformu ile entegrasyon
+                                sağladım.
+                                Real-time sensor verilerini görselleştiren interaktif dashboardlar geliştirdim.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Eywa Bilgi Teknolojileri -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary">Eywa Bilgi Teknolojileri</h3>
+                            <p class="text-lg text-secondary font-semibold">Stajyer Mühendis</p>
+                        </div>
+                        <div class="text-gray-600 font-medium">
+                            04/08/2025 - 29/08/2025
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">Java</span>
+                            <span
+                                class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-sm font-medium">PostgreSQL</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Spring
+                                Boot</span>
+                            <span
+                                class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Docker</span>
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">Redis (Lock
+                                Mechanism)</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">REST
+                                API</span>
+                            <span
+                                class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Mikroservis</span>
+                            <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium">Apache
+                                Kafka</span>
+                            <span
+                                class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">Elasticsearch</span>
+                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium">Custom
+                                Validations</span>
+                            <span
+                                class="bg-violet-100 text-violet-800 px-3 py-1 rounded-full text-sm font-medium">Custom
+                                Annotation</span>
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">Custom
+                                Query</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-gray-700">
+                            Java Spring Boot kullanarak backend projeleri geliştirdim.
+                            Mikroservis mimarileri üzerinde çalıştım ve bu yapıları öğrenme fırsatı buldum.
+                            Excel dosyaları için import ve export servisleri geliştirdim.
+                            Entity sınıflarındaki belirli alanlara göre otomatik tamamlama (auto-complete) servisleri
+                            tasarladım.
+                            Ayrıca özel sorgular (custom queries) ile veri erişiminde esnek çözümler ürettim.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-primary mb-4">Yeteneklerim</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Programlama Dilleri -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:bg-gray-100 transition">
+                    <div class="text-2xl text-secondary mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Programlama Dilleri</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>Java
+                        </li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Python
+                        </li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-yellow-500 rounded-full mr-3"></span>C#
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Backend & Framework -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:bg-gray-100 transition">
+                    <div class="text-2xl text-secondary mb-4">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Backend & Framework</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Spring
+                            Boot</li>
+                        <li class="flex items-center"><span
+                                class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>Django</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>REST
+                            API</li>
+                    </ul>
+                </div>
+
+                <!-- Veritabanları -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:bg-gray-100 transition">
+                    <div class="text-2xl text-secondary mb-4">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Veritabanları</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center"><span
+                                class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>PostgreSQL</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>SQL
+                            Server</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-teal-500 rounded-full mr-3"></span>SQLite
+                        </li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>MongoDB
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Araçlar & Teknolojiler -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:bg-gray-100 transition">
+                    <div class="text-2xl text-secondary mb-4">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Araçlar & Teknolojiler</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Git &
+                            GitHub</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>Postman
+                        </li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-teal-500 rounded-full mr-3"></span>Docker
+                        </li>
+                        <li class="flex items-center"><span
+                                class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>SourceTree</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>Apache
+                            Kafka</li>
+                        <li class="flex items-center"><span
+                                class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>Elasticsearch</li>
+                    </ul>
+                </div>
+
+                <!-- AI & Veri Analizi -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:bg-gray-100 transition">
+                    <div class="text-2xl text-secondary mb-4">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">AI & Veri Analizi</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center"><span
+                                class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Machine Learning</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>Deep
+                            Learning</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>NLP
+                        </li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>LLMs
+                        </li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-yellow-500 rounded-full mr-3"></span>AI
+                            Agents</li>
+                    </ul>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:bg-gray-100 transition">
+                    <div class="text-2xl text-secondary mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Soft Skills</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center"><span
+                                class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>Problem Çözme</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>Takım
+                            Çalışması</li>
+                        <li class="flex items-center"><span
+                                class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>Liderlik</li>
+                        <li class="flex items-center"><span
+                                class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>İletişim</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-primary mb-4">Projelerim</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- AI Medical Analysis System -->
+                <div class="bg-gradient-to-br from-purple-50 to-pink-100 p-8 rounded-2xl card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-stethoscope text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">AI-Powered Medical Analysis System</h3>
+                            <p class="text-sm text-gray-600">Python, OpenAI, Gradio, Image Processing</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        Kullanıcıların tıbbi raporlar, metin veya görüntü dosyaları yükleyebileceği AI destekli tıbbi
+                        analiz sistemi.
+                        OpenAI modelleri ve gelişmiş görüntü işleme teknikleri kullanarak detaylı ön değerlendirme
+                        raporları üretir.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">AI</span>
+                        <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">OpenAI</span>
+                        <span class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">Gradio</span>
+                        <span class="bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm">Image
+                            Processing</span>
+                    </div>
+                    <a href="https://github.com/burakcnaksy0/AI-Powered-Advanced-Medical-Analysis-System"
+                        target="_blank"
+                        class="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold">
+                        <i class="fab fa-github mr-2"></i>
+                        GitHub'da Görüntüle
+                    </a>
+                </div>
+
+                <!-- AI Student Assistant -->
+                <div class="bg-gradient-to-br from-emerald-50 to-teal-100 p-8 rounded-2xl card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-emerald-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-graduation-cap text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">AI-Student-Assistant</h3>
+                            <p class="text-sm text-gray-600">Multiple AI Agents, Gradio, NLP</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        Çoklu AI ajanları (soru-cevap, quiz oluşturma, görsel üretim) içeren öğrenim asistanı
+                        uygulaması.
+                        PDF veya metin girişi kullanarak detaylı sorular sorabilir, otomatik quiz ve eğitsel görseller
+                        üretebilir.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-emerald-200 text-emerald-800 px-3 py-1 rounded-full text-sm">AI Agents</span>
+                        <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Gradio</span>
+                        <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">NLP</span>
+                        <span class="bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm">Quiz
+                            Generation</span>
+                    </div>
+                    <a href="https://github.com/burakcnaksy0/AI-Student-Assistant" target="_blank"
+                        class="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-semibold">
+                        <i class="fab fa-github mr-2"></i>
+                        GitHub'da Görüntüle
+                    </a>
+                </div>
+
+                <!-- Spring Boot Rent A Car -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mr-4">
+                            <i class="fab fa-java text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">Spring Boot Rent A Car</h3>
+                            <p class="text-sm text-gray-600">Java, Spring Boot, REST API</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        Java Spring Boot ile katmanlı mimari (Controller, Service, Repository) kullanılarak
+                        geliştirilmiş araç kiralama backend sistemi.
+                        RESTful API uç noktaları, giriş doğrulama ve özel hata yönetimi içerir.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Java</span>
+                        <span class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">Spring Boot</span>
+                        <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">REST API</span>
+                    </div>
+                    <a href="https://github.com/burakcnaksy0/JavaSpringBoot_RentACarProject" target="_blank"
+                        class="inline-flex items-center text-secondary hover:text-blue-700 font-semibold">
+                        <i class="fab fa-github mr-2"></i>
+                        GitHub'da Görüntüle
+                    </a>
+                </div>
+
+                <!-- Spring Boot JSON Web Security -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-2xl card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-shield-alt text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">Spring Boot JSON Web Security</h3>
+                            <p class="text-sm text-gray-600">Java, Spring Security, JWT</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        Spring Security ve JWT kullanarak kullanıcı kimlik doğrulama ve yetkilendirme sistemi.
+                        AuthenticationManager, AuthenticationProvider, filtreler ve güvenlik zinciri Spring Security
+                        framework'ü içinde düzgün şekilde yapılandırılmıştır.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Java</span>
+                        <span class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">Spring Security</span>
+                        <span class="bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm">JWT</span>
+                    </div>
+                    <a href="https://github.com/burakcnaksy0/spring-security-jwt" target="_blank"
+                        class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold">
+                        <i class="fab fa-github mr-2"></i>
+                        GitHub'da Görüntüle
+                    </a>
+                </div>
+
+                <!-- Vesta - Real Estate Platform -->
+                <div class="bg-gradient-to-br from-rose-50 to-pink-100 p-8 rounded-2xl card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-rose-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-home text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">Vesta - Modern İlan Platformu</h3>
+                            <p class="text-sm text-gray-600">Java Spring Boot, React, PostgreSQL, Docker</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        Kullanıcıların emlak, vasıta, arsa ve işyeri gibi çeşitli kategorilerde güvenle ilan verip arama
+                        yapabileceği modern Full-Stack web platformu.
+                        JWT tabanlı kimlik doğrulama, mesajlaşma sistemi, favoriler ve kullanıcı paneli özellikleriyle
+                        eksiksiz bir deneyim sunar.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm">Java</span>
+                        <span class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">Spring Boot</span>
+                        <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">React</span>
+                        <span class="bg-cyan-200 text-cyan-800 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+                        <span class="bg-indigo-200 text-indigo-800 px-3 py-1 rounded-full text-sm">Docker</span>
+                        <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">JWT</span>
+                        <span class="bg-pink-200 text-pink-800 px-3 py-1 rounded-full text-sm">REST API</span>
+                        <span class="bg-red-200 text-red-800 px-3 py-1 rounded-full text-sm">TypeScript</span>
+                    </div>
+                    <a href="https://github.com/burakcnaksy0/real-estate" target="_blank"
+                        class="inline-flex items-center text-rose-600 hover:text-rose-700 font-semibold">
+                        <i class="fab fa-github mr-2"></i>
+                        GitHub'da Görüntüle
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-primary mb-4">Sertifikalarım</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Certificate 1 -->
+                <a href="certificates/Makine_Öğrenmesi_Sertifika.pdf" target="_blank"
+                    class="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-xl shadow-lg card-hover border-l-4 border-blue-500 block transition-transform hover:scale-105">
+                    <div class="flex items-start mb-3">
+                        <i class="fas fa-certificate text-blue-600 text-2xl mr-3 mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Makine Öğrenmesi</h3>
+                            <p class="text-xs text-gray-600 mt-1 flex items-center">
+                                <i class="fas fa-external-link-alt mr-1"></i>
+                                Sertifikayı Görüntüle
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Certificate 2 -->
+                <a href="certificates/Python_ile_Makine_Öğrenmesi_Uygulamaları_Sertifika.pdf" target="_blank"
+                    class="bg-gradient-to-br from-green-50 to-emerald-100 p-6 rounded-xl shadow-lg card-hover border-l-4 border-green-500 block transition-transform hover:scale-105">
+                    <div class="flex items-start mb-3">
+                        <i class="fas fa-certificate text-green-600 text-2xl mr-3 mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Python ile Makine Öğrenmesi Uygulamaları</h3>
+                            <p class="text-xs text-gray-600 mt-1 flex items-center">
+                                <i class="fas fa-external-link-alt mr-1"></i>
+                                Sertifikayı Görüntüle
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Certificate 3 -->
+                <a href="certificates/Python_Programlama_Dili_Sertifika.pdf" target="_blank"
+                    class="bg-gradient-to-br from-yellow-50 to-amber-100 p-6 rounded-xl shadow-lg card-hover border-l-4 border-yellow-500 block transition-transform hover:scale-105">
+                    <div class="flex items-start mb-3">
+                        <i class="fas fa-certificate text-yellow-600 text-2xl mr-3 mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Python Programlama Dili</h3>
+                            <p class="text-xs text-gray-600 mt-1 flex items-center">
+                                <i class="fas fa-external-link-alt mr-1"></i>
+                                Sertifikayı Görüntüle
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Certificate 4 -->
+                <a href="certificates/Yapay_Zeka_İle_Veri_Analizinden_LLM'lere_Atölyesi_Sertifika.pdf" target="_blank"
+                    class="bg-gradient-to-br from-purple-50 to-violet-100 p-6 rounded-xl shadow-lg card-hover border-l-4 border-purple-500 block transition-transform hover:scale-105">
+                    <div class="flex items-start mb-3">
+                        <i class="fas fa-certificate text-purple-600 text-2xl mr-3 mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Yapay Zeka İle Veri Analizinden LLM'lere Atölyesi
+                            </h3>
+                            <p class="text-xs text-gray-600 mt-1 flex items-center">
+                                <i class="fas fa-external-link-alt mr-1"></i>
+                                Sertifikayı Görüntüle
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Certificate 5 - Python A-Z -->
+                <a href="certificates/az-seviye_programlama.pdf" target="_blank"
+                    class="bg-gradient-to-br from-pink-50 to-rose-100 p-6 rounded-xl shadow-lg card-hover border-l-4 border-pink-500 block transition-transform hover:scale-105">
+                    <div class="flex items-start mb-3">
+                        <i class="fas fa-certificate text-pink-600 text-2xl mr-3 mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">A-Z™ | Sıfırdan İleri Seviyeye Java Programlama</h3>
+                            <p class="text-xs text-gray-600 mt-1 flex items-center">
+                                <i class="fas fa-external-link-alt mr-1"></i>
+                                Sertifikayı Görüntüle
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg relative">
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">İletişim</h2>
+                <div class="w-24 h-1 bg-white mx-auto rounded"></div>
+                <p class="text-xl text-gray-200 mt-4">Benimle iletişime geçin</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <a href="mailto:aksoyburak808@gmail.com"
+                    class="bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl text-center hover:bg-opacity-20 transition-all card-hover text-white">
+                    <i class="fas fa-envelope text-3xl mb-4"></i>
+                    <h3 class="font-semibold mb-2">E-posta</h3>
+                    <p class="text-sm opacity-90">aksoyburak808@gmail.com</p>
+                </a>
+                <a href="tel:+905350482874"
+                    class="bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl text-center hover:bg-opacity-20 transition-all card-hover text-white">
+                    <i class="fas fa-phone text-3xl mb-4"></i>
+                    <h3 class="font-semibold mb-2">Telefon</h3>
+                    <p class="text-sm opacity-90">+90 535 048 28 74</p>
+                </a>
+                <a href="https://www.linkedin.com/in/burakcan-aksoy-ba0132259/" target="_blank"
+                    class="bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl text-center hover:bg-opacity-20 transition-all card-hover text-white">
+                    <i class="fab fa-linkedin text-3xl mb-4"></i>
+                    <h3 class="font-semibold mb-2">LinkedIn</h3>
+                    <p class="text-sm opacity-90">burakcanaksoy</p>
+                </a>
+                <a href="https://github.com/burakcnaksy0" target="_blank"
+                    class="bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl text-center hover:bg-opacity-20 transition-all card-hover text-white">
+                    <i class="fab fa-github text-3xl mb-4"></i>
+                    <h3 class="font-semibold mb-2">GitHub</h3>
+                    <p class="text-sm opacity-90">burakcanaksoy</p>
+                </a>
+            </div>
+            <div class="text-center mt-12">
+                <p class="text-gray-200 mb-4">Kocaeli / Gebze</p>
+                <a href="https://burakcanaksoy.com.tr/" target="_blank"
+                    class="inline-flex items-center text-white hover:text-gray-200 font-semibold">
+                    <i class="fas fa-globe mr-2"></i>
+                    burakcanaksoy.com.tr
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Burakcan Aksoy. Tüm hakları saklıdır.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://github.com/burakcnaksy0" target="_blank"
+                    class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/burakcan-aksoy-ba0132259/" target="_blank"
+                    class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe sections for animations
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+
+
+    </script>
+</body>
+
+</html>
